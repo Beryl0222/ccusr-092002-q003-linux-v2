@@ -1,0 +1,21 @@
+{
+  "service": "heritage-visit-coordination",
+  "source_context": "http://ent.people.com.cn/n1/2026/0917/c1012-40800223.html",
+  "sample": {
+    "date": "2026-09-16",
+    "resources": [
+      {
+        "id": "storyteller-01",
+        "kind": "oral_tradition",
+        "capacity": 1
+      }
+    ],
+    "groups": [
+      {
+        "id": "G-18",
+        "size": 22,
+        "mobility_support": true
+      }
+    ]
+  }
+}
