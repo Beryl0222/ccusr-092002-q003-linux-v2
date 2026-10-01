@@ -3,18 +3,127 @@
   "source_context": "http://ent.people.com.cn/n1/2026/0917/c1012-40800223.html",
   "sample": {
     "date": "2026-09-16",
+    "default_walk_minutes": 5,
+    "mobility_walk_factor": 1.5,
+    "walk_minutes": [
+      {"from": "entry-plaza", "to": "chant-hall", "minutes": 6},
+      {"from": "entry-plaza", "to": "birch-workshop", "minutes": 8},
+      {"from": "entry-plaza", "to": "herb-gallery", "minutes": 10},
+      {"from": "entry-plaza", "to": "herb-trail", "minutes": 14},
+      {"from": "chant-hall", "to": "birch-workshop", "minutes": 5},
+      {"from": "chant-hall", "to": "herb-gallery", "minutes": 9},
+      {"from": "chant-hall", "to": "herb-trail", "minutes": 12},
+      {"from": "birch-workshop", "to": "herb-gallery", "minutes": 7},
+      {"from": "birch-workshop", "to": "herb-trail", "minutes": 9},
+      {"from": "herb-gallery", "to": "herb-trail", "minutes": 4}
+    ],
+    "conditions": {
+      "outdoor_ok": true,
+      "road_closed": []
+    },
     "resources": [
       {
         "id": "storyteller-01",
         "kind": "oral_tradition",
-        "capacity": 1
+        "name": "摩苏昆说唱",
+        "location": "chant-hall",
+        "staff": ["inheritor-w"],
+        "capacity": 1,
+        "slot_minutes": 40,
+        "open": [["09:00", "11:30"], ["14:00", "16:30"]],
+        "accessible": true,
+        "content": ["mosukun-epic", "origin-story"],
+        "taboo": ["shaman-rite-live"],
+        "price_cny": 30,
+        "share": {"inheritor-w": 0.7, "coop": 0.3}
+      },
+      {
+        "id": "chant-02",
+        "kind": "oral_tradition",
+        "name": "火塘叙话",
+        "location": "entry-plaza",
+        "staff": ["inheritor-w"],
+        "capacity": 1,
+        "slot_minutes": 30,
+        "open": [["10:00", "12:00"]],
+        "accessible": true,
+        "outdoor": true,
+        "content": ["fireside-talk"],
+        "taboo": [],
+        "price_cny": 18,
+        "share": {"inheritor-w": 0.7, "coop": 0.3}
+      },
+      {
+        "id": "birch-01",
+        "kind": "craft",
+        "name": "桦树皮工艺",
+        "location": "birch-workshop",
+        "staff": ["inheritor-l"],
+        "capacity": 2,
+        "capacity_visitors": 30,
+        "slot_minutes": 50,
+        "open": [["09:00", "12:00"], ["13:30", "17:00"]],
+        "accessible": true,
+        "content": ["birch-bark-craft"],
+        "taboo": [],
+        "price_cny": 25,
+        "share": {"inheritor-l": 0.6, "coop": 0.4}
+      },
+      {
+        "id": "herb-01",
+        "kind": "venue",
+        "name": "药材文化展陈",
+        "location": "herb-gallery",
+        "staff": [],
+        "capacity": 3,
+        "capacity_visitors": 60,
+        "slot_minutes": 30,
+        "open": [["08:30", "17:00"]],
+        "accessible": true,
+        "content": ["herb-culture"],
+        "taboo": [],
+        "price_cny": 15,
+        "share": {"venue-herb": 0.8, "coop": 0.2}
+      },
+      {
+        "id": "herb-02",
+        "kind": "field_walk",
+        "name": "林下药材步道",
+        "location": "herb-trail",
+        "staff": ["guide-m"],
+        "capacity": 1,
+        "slot_minutes": 60,
+        "open": [["09:00", "11:00"], ["14:00", "16:00"]],
+        "accessible": false,
+        "outdoor": true,
+        "road": "trail-north",
+        "content": ["herb-field-walk"],
+        "taboo": [],
+        "price_cny": 20,
+        "share": {"guide-m": 0.5, "venue-herb": 0.3, "coop": 0.2}
       }
     ],
     "groups": [
       {
         "id": "G-18",
         "size": 22,
-        "mobility_support": true
+        "mobility_support": true,
+        "arrive": "08:50",
+        "requests": [
+          {"resource": "storyteller-01", "content": "mosukun-epic", "earliest": "09:00"},
+          {"resource": "birch-01", "content": "birch-bark-craft"},
+          {"resource": "herb-01", "content": "herb-culture"}
+        ]
+      },
+      {
+        "id": "G-22",
+        "size": 12,
+        "mobility_support": false,
+        "arrive": "08:45",
+        "requests": [
+          {"resource": "chant-02", "content": "fireside-talk", "earliest": "10:00"},
+          {"resource": "herb-02", "content": "herb-field-walk"}
+        ]
       }
     ]
   }
