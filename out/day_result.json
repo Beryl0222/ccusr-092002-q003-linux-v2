@@ -1,0 +1,723 @@
+{
+  "date": "2026-09-16",
+  "currency": "CNY",
+  "final_schedule": [
+    {
+      "booking_id": "B-001",
+      "group": "G-18",
+      "resource": "storyteller-01",
+      "resource_name": "摩苏昆传承人（示例甲）",
+      "content": "mosukun-frag",
+      "content_name": "摩苏昆说唱片段",
+      "start": "09:00",
+      "end": "09:45",
+      "status": "scheduled",
+      "actual_start": "09:02",
+      "team_size": 22,
+      "walk_minutes": 0,
+      "walk_path": [
+        "oral-stage"
+      ],
+      "walk_detour": false,
+      "note": ""
+    },
+    {
+      "booking_id": "B-002",
+      "group": "G-18",
+      "resource": "craft-01",
+      "resource_name": "桦树皮工艺坊",
+      "content": "birchbark-carving",
+      "content_name": "桦树皮刻画体验",
+      "start": "10:15",
+      "end": "11:15",
+      "status": "scheduled",
+      "actual_start": "10:16",
+      "team_size": 22,
+      "walk_minutes": 6,
+      "walk_path": [
+        "oral-stage",
+        "birchbark-hall"
+      ],
+      "walk_detour": false,
+      "note": ""
+    },
+    {
+      "booking_id": "B-003",
+      "group": "G-18",
+      "resource": "herb-01",
+      "resource_name": "道地药材文化展馆",
+      "content": "herb-culture",
+      "content_name": "道地药材文化讲解",
+      "start": "13:30",
+      "end": "14:15",
+      "status": "scheduled",
+      "actual_start": "13:34",
+      "team_size": 22,
+      "walk_minutes": 6,
+      "walk_path": [
+        "birchbark-hall",
+        "herb-hall"
+      ],
+      "walk_detour": false,
+      "note": ""
+    },
+    {
+      "booking_id": "B-004",
+      "group": "G-18",
+      "resource": "folk-01",
+      "resource_name": "民俗体验院落（示例住户）",
+      "content": "folk-experience",
+      "content_name": "民居与岁时民俗体验",
+      "start": "15:30",
+      "end": "16:30",
+      "status": "scheduled",
+      "actual_start": "15:50",
+      "team_size": 22,
+      "walk_minutes": 5,
+      "walk_path": [
+        "herb-hall",
+        "folk-yard"
+      ],
+      "walk_detour": false,
+      "note": ""
+    },
+    {
+      "booking_id": "B-005",
+      "group": "G-24",
+      "resource": "storyteller-02",
+      "resource_name": "摩苏昆传承人（示例乙）",
+      "content": "mosukun-frag",
+      "content_name": "摩苏昆说唱片段",
+      "start": "09:30",
+      "end": "10:15",
+      "status": "delayed",
+      "actual_start": "10:10",
+      "team_size": 16,
+      "walk_minutes": 0,
+      "walk_path": [
+        "story-corner"
+      ],
+      "walk_detour": false,
+      "note": "迟到 40 分钟"
+    },
+    {
+      "booking_id": "B-006",
+      "group": "G-24",
+      "resource": "craft-02",
+      "resource_name": "桦皮船林间制作点",
+      "content": "birchbark-boat",
+      "content_name": "桦皮船制作体验",
+      "start": "13:30",
+      "end": "14:30",
+      "status": "rerouted",
+      "actual_start": null,
+      "team_size": 16,
+      "walk_minutes": 20,
+      "walk_path": [
+        "story-corner",
+        "oral-stage",
+        "folk-yard",
+        "outdoor-camp"
+      ],
+      "walk_detour": true,
+      "note": ""
+    },
+    {
+      "booking_id": "B-007",
+      "group": "G-24",
+      "resource": "herb-01",
+      "resource_name": "道地药材文化展馆",
+      "content": "herb-tasting",
+      "content_name": "北药代茶饮品鉴",
+      "start": "15:30",
+      "end": "16:10",
+      "status": "cancelled",
+      "actual_start": null,
+      "team_size": 16,
+      "walk_minutes": 17,
+      "walk_path": [
+        "outdoor-camp",
+        "village-square",
+        "folk-yard",
+        "herb-hall"
+      ],
+      "walk_detour": false,
+      "note": ""
+    },
+    {
+      "booking_id": "B-R008",
+      "group": "G-24",
+      "resource": "craft-01",
+      "resource_name": "桦树皮工艺坊",
+      "content": "birchbark-carving",
+      "content_name": "桦树皮刻画体验",
+      "start": "13:40",
+      "end": "14:40",
+      "status": "scheduled",
+      "actual_start": "13:46",
+      "team_size": 16,
+      "walk_minutes": null,
+      "walk_path": [],
+      "walk_detour": false,
+      "note": "由 B-006 改道：户外停演，改至室内工艺坊同主题体验"
+    }
+  ],
+  "notices": [
+    {
+      "at": "08:00",
+      "group": "G-18",
+      "level": "change",
+      "kind": "content_substituted",
+      "title": "《坡地认药采药》调整为《道地药材文化讲解》",
+      "detail": "原项目无法安排（场地“北药辨识坡地”不支持轮椅通行（田埂坡道，轮椅无法进入））。新安排：道地药材文化展馆 13:30，请按新方案前往。",
+      "booking_id": "B-003"
+    },
+    {
+      "at": "08:00",
+      "group": "G-18",
+      "level": "cancel",
+      "kind": "taboo",
+      "title": "您预约的《祭祀长歌（内部仪式）》无法安排",
+      "detail": "《祭祀长歌（内部仪式）》仅限氏族内部祭祀场合，族规禁止向旅游团队演唱或录制。该项目不会出现在您的游览方案中，也不计费用。",
+      "booking_id": null
+    },
+    {
+      "at": "08:00",
+      "group": "G-24",
+      "level": "change",
+      "kind": "resource_reassigned",
+      "title": "《摩苏昆说唱片段》改至 摩苏昆传承人（示例乙）",
+      "detail": "原申报 摩苏昆传承人（示例甲） 09:00 无法安排（承载量 1 团队 已被占用（G-18 09:00-09:45））。新时间 09:30，请按新安排前往。",
+      "booking_id": "B-005"
+    },
+    {
+      "at": "08:00",
+      "group": "G-24",
+      "level": "cancel",
+      "kind": "not_authorized",
+      "title": "您预约的《祭祖叙事片段》无法安排",
+      "detail": "《祭祖叙事片段》需要单独授权，本年度未签署对外讲述授权。该项目不会出现在您的游览方案中，也不计费用。",
+      "booking_id": null
+    },
+    {
+      "at": "10:10",
+      "group": "G-24",
+      "level": "info",
+      "kind": "late",
+      "title": "开演时间顺延通知",
+      "detail": "您预约的《摩苏昆说唱片段》因团队迟到，顺延至 10:10 开始，请按新时间前往。",
+      "booking_id": "B-005"
+    },
+    {
+      "at": "12:40",
+      "group": "G-24",
+      "level": "cancel",
+      "kind": "stop",
+      "title": "停演通知",
+      "detail": "桦皮船林间制作点自 12:40 起停演：阵雨延后，林间步道持续湿滑，户外制作点下午场停演。您预约的《桦皮船制作体验》13:30 场次无法进行，正在安排替代方案。",
+      "booking_id": "B-006"
+    },
+    {
+      "at": "12:45",
+      "group": "G-24",
+      "level": "change",
+      "kind": "reroute",
+      "title": "行程变更通知",
+      "detail": "因户外停演，改至室内工艺坊同主题体验，13:30 的《桦皮船制作体验》调整为 13:40 在桦树皮工艺坊进行的《桦树皮刻画体验》，请按新行程前往。",
+      "booking_id": "B-R008"
+    },
+    {
+      "at": "15:25",
+      "group": "G-24",
+      "level": "cancel",
+      "kind": "cancel",
+      "title": "场次取消确认",
+      "detail": "您 15:30 在道地药材文化展馆的《北药代茶饮品鉴》已取消（团队提前返程），该场次不收取费用。",
+      "booking_id": "B-007"
+    },
+    {
+      "at": "16:20",
+      "group": "G-18",
+      "level": "info",
+      "kind": "offline_synced",
+      "title": "离线核销已同步",
+      "detail": "您在 15:50 的《民居与岁时民俗体验》核销已在网络恢复后同步，实际参与 20 人，仅计费一次。",
+      "booking_id": "B-004"
+    }
+  ],
+  "settlement": {
+    "currency": "CNY",
+    "lines": [
+      {
+        "event_id": "EV-2001",
+        "group": "G-18",
+        "resource": "storyteller-01",
+        "resource_name": "摩苏昆传承人（示例甲）",
+        "content": "mosukun-frag",
+        "content_name": "摩苏昆说唱片段",
+        "participants": 22,
+        "unit_price_cents": 1500,
+        "gross_cents": 33000,
+        "splits": {
+          "P-meng": 26400,
+          "collective": 6600
+        },
+        "offline": false,
+        "currency": "CNY"
+      },
+      {
+        "event_id": "EV-2006",
+        "group": "G-24",
+        "resource": "storyteller-02",
+        "resource_name": "摩苏昆传承人（示例乙）",
+        "content": "mosukun-frag",
+        "content_name": "摩苏昆说唱片段",
+        "participants": 16,
+        "unit_price_cents": 1500,
+        "gross_cents": 24000,
+        "splits": {
+          "P-ge": 19200,
+          "collective": 4800
+        },
+        "offline": false,
+        "currency": "CNY"
+      },
+      {
+        "event_id": "EV-2002",
+        "group": "G-18",
+        "resource": "craft-01",
+        "resource_name": "桦树皮工艺坊",
+        "content": "birchbark-carving",
+        "content_name": "桦树皮刻画体验",
+        "participants": 22,
+        "unit_price_cents": 1200,
+        "gross_cents": 26400,
+        "splits": {
+          "P-wu": 13200,
+          "H-birch": 10560,
+          "collective": 2640
+        },
+        "offline": false,
+        "currency": "CNY"
+      },
+      {
+        "event_id": "EV-2003",
+        "group": "G-18",
+        "resource": "herb-01",
+        "resource_name": "道地药材文化展馆",
+        "content": "herb-culture",
+        "content_name": "道地药材文化讲解",
+        "participants": 21,
+        "unit_price_cents": 600,
+        "gross_cents": 12600,
+        "splits": {
+          "H-herb": 6300,
+          "P-herb": 5040,
+          "collective": 1260
+        },
+        "offline": false,
+        "currency": "CNY"
+      },
+      {
+        "event_id": "EV-2007",
+        "group": "G-24",
+        "resource": "craft-01",
+        "resource_name": "桦树皮工艺坊",
+        "content": "birchbark-carving",
+        "content_name": "桦树皮刻画体验",
+        "participants": 16,
+        "unit_price_cents": 1200,
+        "gross_cents": 19200,
+        "splits": {
+          "P-wu": 9600,
+          "H-birch": 7680,
+          "collective": 1920
+        },
+        "offline": false,
+        "currency": "CNY"
+      },
+      {
+        "event_id": "EV-2004",
+        "group": "G-18",
+        "resource": "folk-01",
+        "resource_name": "民俗体验院落（示例住户）",
+        "content": "folk-experience",
+        "content_name": "民居与岁时民俗体验",
+        "participants": 20,
+        "unit_price_cents": 1000,
+        "gross_cents": 20000,
+        "splits": {
+          "H-folk": 14000,
+          "collective": 6000
+        },
+        "offline": true,
+        "currency": "CNY"
+      }
+    ],
+    "payee_totals": {
+      "P-meng": 26400,
+      "P-ge": 19200,
+      "P-wu": 22800,
+      "P-herb": 5040,
+      "H-birch": 18240,
+      "H-herb": 6300,
+      "H-folk": 14000,
+      "collective": 23220
+    },
+    "group_totals": {
+      "G-18": 92000,
+      "G-24": 43200
+    },
+    "resource_totals": {
+      "storyteller-01": 33000,
+      "storyteller-02": 24000,
+      "craft-01": 45600,
+      "herb-01": 12600,
+      "folk-01": 20000
+    },
+    "skipped": []
+  },
+  "decisions": [
+    {
+      "seq": 1,
+      "stage": "planning",
+      "group": "G-18",
+      "code": "accepted",
+      "title": "《摩苏昆说唱片段》排入 摩苏昆传承人（示例甲）",
+      "detail": "09:00-09:45 按申报成立。",
+      "result": "accepted",
+      "request": {
+        "group": "G-18",
+        "index": 0,
+        "content": "mosukun-frag",
+        "resource": "storyteller-01",
+        "preferred_start": "09:00"
+      },
+      "booking_id": "B-001"
+    },
+    {
+      "seq": 2,
+      "stage": "planning",
+      "group": "G-18",
+      "code": "accepted",
+      "title": "《桦树皮刻画体验》排入 桦树皮工艺坊",
+      "detail": "10:15-11:15 按申报成立。",
+      "result": "accepted",
+      "request": {
+        "group": "G-18",
+        "index": 1,
+        "content": "birchbark-carving",
+        "resource": "craft-01",
+        "preferred_start": "10:15"
+      },
+      "booking_id": "B-002"
+    },
+    {
+      "seq": 3,
+      "stage": "planning",
+      "group": "G-18",
+      "code": "content_substituted",
+      "title": "《坡地认药采药》替换为《道地药材文化讲解》",
+      "detail": "原项目无法安排：场地“北药辨识坡地”不支持轮椅通行（田埂坡道，轮椅无法进入）。已改约至道地药材文化展馆 13:30 开始的《道地药材文化讲解》。",
+      "result": "substituted",
+      "request": {
+        "group": "G-18",
+        "index": 2,
+        "content": "herb-walk",
+        "resource": "herb-02",
+        "preferred_start": "13:30"
+      },
+      "booking_id": "B-003"
+    },
+    {
+      "seq": 4,
+      "stage": "planning",
+      "group": "G-18",
+      "code": "accepted",
+      "title": "《民居与岁时民俗体验》排入 民俗体验院落（示例住户）",
+      "detail": "15:30-16:30 按申报成立。",
+      "result": "accepted",
+      "request": {
+        "group": "G-18",
+        "index": 3,
+        "content": "folk-experience",
+        "resource": "folk-01",
+        "preferred_start": "15:30"
+      },
+      "booking_id": "B-004"
+    },
+    {
+      "seq": 5,
+      "stage": "planning",
+      "group": "G-18",
+      "code": "taboo",
+      "title": "拒绝排入《祭祀长歌（内部仪式）》",
+      "detail": "《祭祀长歌（内部仪式）》仅限氏族内部祭祀场合，族规禁止向旅游团队演唱或录制",
+      "result": "rejected",
+      "request": {
+        "group": "G-18",
+        "index": 4,
+        "content": "sacred-song",
+        "resource": "storyteller-01",
+        "preferred_start": "16:00"
+      },
+      "booking_id": null
+    },
+    {
+      "seq": 6,
+      "stage": "planning",
+      "group": "G-24",
+      "code": "resource_reassigned",
+      "title": "《摩苏昆说唱片段》改由 摩苏昆传承人（示例乙） 承接",
+      "detail": "原申报 摩苏昆传承人（示例甲） 09:00 不可安排：承载量 1 团队 已被占用（G-18 09:00-09:45）。新安排 09:30 开始。",
+      "result": "reassigned",
+      "request": {
+        "group": "G-24",
+        "index": 0,
+        "content": "mosukun-frag",
+        "resource": "storyteller-01",
+        "preferred_start": "09:00"
+      },
+      "booking_id": "B-005"
+    },
+    {
+      "seq": 7,
+      "stage": "planning",
+      "group": "G-24",
+      "code": "not_authorized",
+      "title": "拒绝排入《祭祖叙事片段》",
+      "detail": "《祭祖叙事片段》需要单独授权，本年度未签署对外讲述授权",
+      "result": "rejected",
+      "request": {
+        "group": "G-24",
+        "index": 1,
+        "content": "ritual-fragment",
+        "resource": "storyteller-01",
+        "preferred_start": "11:00"
+      },
+      "booking_id": null
+    },
+    {
+      "seq": 8,
+      "stage": "planning",
+      "group": "G-24",
+      "code": "accepted",
+      "title": "《桦皮船制作体验》排入 桦皮船林间制作点",
+      "detail": "13:30-14:30 按申报成立。受道路封闭影响，步行路线需绕行",
+      "result": "accepted",
+      "request": {
+        "group": "G-24",
+        "index": 2,
+        "content": "birchbark-boat",
+        "resource": "craft-02",
+        "preferred_start": "13:30"
+      },
+      "booking_id": "B-006"
+    },
+    {
+      "seq": 9,
+      "stage": "planning",
+      "group": "G-24",
+      "code": "accepted",
+      "title": "《北药代茶饮品鉴》排入 道地药材文化展馆",
+      "detail": "15:30-16:10 按申报成立。",
+      "result": "accepted",
+      "request": {
+        "group": "G-24",
+        "index": 3,
+        "content": "herb-tasting",
+        "resource": "herb-01",
+        "preferred_start": "15:30"
+      },
+      "booking_id": "B-007"
+    },
+    {
+      "seq": 10,
+      "stage": "operations",
+      "group": "G-18",
+      "code": "headcount_updated",
+      "title": "G-18 现场实到 22 人",
+      "detail": "申报人数 22，现场核定 22 人，后续容量与分账以实到人数为准。",
+      "result": "applied",
+      "request": {
+        "event_id": "EV-1001",
+        "type": "headcount"
+      },
+      "booking_id": null
+    },
+    {
+      "seq": 11,
+      "stage": "operations",
+      "group": "G-24",
+      "code": "headcount_updated",
+      "title": "G-24 现场实到 16 人",
+      "detail": "申报人数 16，现场核定 16 人，后续容量与分账以实到人数为准。",
+      "result": "applied",
+      "request": {
+        "event_id": "EV-1002",
+        "type": "headcount"
+      },
+      "booking_id": null
+    },
+    {
+      "seq": 12,
+      "stage": "operations",
+      "group": "G-18",
+      "code": "checked_in",
+      "title": "核销成功：G-18《摩苏昆说唱片段》",
+      "detail": "实际参与 22 人，按此人数结算。",
+      "result": "applied",
+      "request": {
+        "event_id": "EV-2001",
+        "type": "checkin"
+      },
+      "booking_id": "B-001"
+    },
+    {
+      "seq": 13,
+      "stage": "operations",
+      "group": "G-24",
+      "code": "late_arrival",
+      "title": "G-24 迟到 40 分钟",
+      "detail": "《摩苏昆说唱片段》开始时间顺延至 10:10，结束时间相应顺延，仍在资源开放时段内。",
+      "result": "applied",
+      "request": {
+        "event_id": "EV-2005",
+        "type": "late_arrival"
+      },
+      "booking_id": "B-005"
+    },
+    {
+      "seq": 14,
+      "stage": "operations",
+      "group": "G-24",
+      "code": "checked_in",
+      "title": "核销成功：G-24《摩苏昆说唱片段》",
+      "detail": "实际参与 16 人，按此人数结算。",
+      "result": "applied",
+      "request": {
+        "event_id": "EV-2006",
+        "type": "checkin"
+      },
+      "booking_id": "B-005"
+    },
+    {
+      "seq": 15,
+      "stage": "operations",
+      "group": "G-18",
+      "code": "checked_in",
+      "title": "核销成功：G-18《桦树皮刻画体验》",
+      "detail": "实际参与 22 人，按此人数结算。",
+      "result": "applied",
+      "request": {
+        "event_id": "EV-2002",
+        "type": "checkin"
+      },
+      "booking_id": "B-002"
+    },
+    {
+      "seq": 16,
+      "stage": "operations",
+      "group": null,
+      "code": "resource_stopped",
+      "title": "桦皮船林间制作点 自 12:40 停演",
+      "detail": "原因：阵雨延后，林间步道持续湿滑，户外制作点下午场停演。受影响排班：G-24 13:30。相关场次容量即时释放，不计收入，等待改道或取消。",
+      "result": "applied",
+      "request": {
+        "event_id": "EV-3001",
+        "type": "stop"
+      },
+      "booking_id": null
+    },
+    {
+      "seq": 17,
+      "stage": "operations",
+      "group": "G-24",
+      "code": "rerouted",
+      "title": "G-24 改道至桦树皮工艺坊",
+      "detail": "原《桦皮船制作体验》(桦皮船林间制作点 13:30) 取消；原因：户外停演，改至室内工艺坊同主题体验。新安排《桦树皮刻画体验》13:40 开始，按新项目价格与实际参与人数结算。",
+      "result": "applied",
+      "request": {
+        "event_id": "EV-3002",
+        "type": "reroute"
+      },
+      "booking_id": "B-R008"
+    },
+    {
+      "seq": 18,
+      "stage": "operations",
+      "group": "G-18",
+      "code": "checked_in",
+      "title": "核销成功：G-18《道地药材文化讲解》",
+      "detail": "实际参与 21 人，按此人数结算。",
+      "result": "applied",
+      "request": {
+        "event_id": "EV-2003",
+        "type": "checkin"
+      },
+      "booking_id": "B-003"
+    },
+    {
+      "seq": 19,
+      "stage": "operations",
+      "group": "G-24",
+      "code": "checked_in",
+      "title": "核销成功：G-24《桦树皮刻画体验》",
+      "detail": "实际参与 16 人，按此人数结算。",
+      "result": "applied",
+      "request": {
+        "event_id": "EV-2007",
+        "type": "checkin"
+      },
+      "booking_id": "B-R008"
+    },
+    {
+      "seq": 20,
+      "stage": "operations",
+      "group": "G-24",
+      "code": "cancelled",
+      "title": "G-24 取消《北药代茶饮品鉴》",
+      "detail": "取消方：group_lead；原因：团队提前返程。容量即时释放给其他团队，该场次不计费、不参与分账。",
+      "result": "applied",
+      "request": {
+        "event_id": "EV-3003",
+        "type": "cancel"
+      },
+      "booking_id": "B-007"
+    },
+    {
+      "seq": 21,
+      "stage": "operations",
+      "group": "G-18",
+      "code": "checked_in",
+      "title": "核销成功：G-18《民居与岁时民俗体验》",
+      "detail": "实际参与 20 人，按此人数结算。该核销于 15:50 离线记录，16:20 网络恢复后同步，以实际发生时间入账。",
+      "result": "applied",
+      "request": {
+        "event_id": "EV-2004",
+        "type": "checkin"
+      },
+      "booking_id": "B-004"
+    },
+    {
+      "seq": 22,
+      "stage": "operations",
+      "group": "G-18",
+      "code": "duplicate_suppressed",
+      "title": "重复事件 EV-2004 已忽略",
+      "detail": "事件 id 已处理过（离线终端网络恢复后的重试），不重复占用容量、不重复计费。",
+      "result": "suppressed",
+      "request": {
+        "event_id": "EV-2004",
+        "type": "checkin"
+      },
+      "booking_id": null
+    }
+  ],
+  "ignored_events": [
+    {
+      "event_id": "EV-2004",
+      "reason": "duplicate_event_id"
+    }
+  ]
+}

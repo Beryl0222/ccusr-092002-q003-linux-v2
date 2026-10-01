@@ -1,21 +1,283 @@
 {
   "service": "heritage-visit-coordination",
   "source_context": "http://ent.people.com.cn/n1/2026/0917/c1012-40800223.html",
+  "schema_version": "1.0",
   "sample": {
     "date": "2026-09-16",
+    "planning_opened_at": "08:00",
+    "locations": [
+      {"id": "village-square", "name": "村中心广场", "accessible": true, "indoor": false},
+      {"id": "story-corner", "name": "说唱副场", "accessible": true, "indoor": true},
+      {"id": "oral-stage", "name": "摩苏林书场", "accessible": true, "indoor": true},
+      {"id": "birchbark-hall", "name": "桦树皮工艺坊", "accessible": true, "indoor": true},
+      {"id": "outdoor-camp", "name": "桦皮船林间制作点", "accessible": false, "indoor": false, "note": "仅林间小路可达，轮椅无法进入"},
+      {"id": "herb-hall", "name": "道地药材文化展馆", "accessible": true, "indoor": true},
+      {"id": "herb-field", "name": "北药辨识坡地", "accessible": false, "indoor": false, "note": "田埂坡道，轮椅无法进入"},
+      {"id": "folk-yard", "name": "民俗体验院落", "accessible": true, "indoor": true}
+    ],
+    "edges": [
+      {"from": "village-square", "to": "story-corner", "minutes": 3, "accessible": true},
+      {"from": "story-corner", "to": "oral-stage", "minutes": 3, "accessible": true},
+      {"from": "village-square", "to": "oral-stage", "minutes": 6, "accessible": true},
+      {"from": "village-square", "to": "birchbark-hall", "minutes": 8, "accessible": true},
+      {"from": "village-square", "to": "folk-yard", "minutes": 5, "accessible": true},
+      {"from": "oral-stage", "to": "birchbark-hall", "minutes": 6, "accessible": true},
+      {"from": "oral-stage", "to": "folk-yard", "minutes": 4, "accessible": true},
+      {"from": "birchbark-hall", "to": "folk-yard", "minutes": 7, "accessible": true},
+      {"from": "birchbark-hall", "to": "herb-hall", "minutes": 6, "accessible": true},
+      {"from": "folk-yard", "to": "herb-hall", "minutes": 5, "accessible": true},
+      {"from": "village-square", "to": "outdoor-camp", "minutes": 7, "accessible": false, "trail": true},
+      {"from": "folk-yard", "to": "outdoor-camp", "minutes": 13, "accessible": false, "trail": true},
+      {"from": "birchbark-hall", "to": "herb-field", "minutes": 12, "accessible": false, "trail": true}
+    ],
+    "contents": [
+      {
+        "id": "mosukun-frag",
+        "name": "摩苏昆说唱片段",
+        "kind": "oral_tradition",
+        "duration_minutes": 45,
+        "price_cents": 1500
+      },
+      {
+        "id": "sacred-song",
+        "name": "祭祀长歌（内部仪式）",
+        "kind": "oral_tradition",
+        "duration_minutes": 30,
+        "price_cents": 0,
+        "taboo_for_visitors": true,
+        "taboo_reason": "仅限氏族内部祭祀场合，族规禁止向旅游团队演唱或录制"
+      },
+      {
+        "id": "ritual-fragment",
+        "name": "祭祖叙事片段",
+        "kind": "oral_tradition",
+        "duration_minutes": 40,
+        "price_cents": 1800,
+        "requires_authorization": true
+      },
+      {
+        "id": "birchbark-carving",
+        "name": "桦树皮刻画体验",
+        "kind": "craft",
+        "duration_minutes": 60,
+        "price_cents": 1200
+      },
+      {
+        "id": "birchbark-boat",
+        "name": "桦皮船制作体验",
+        "kind": "craft",
+        "duration_minutes": 60,
+        "price_cents": 1200,
+        "outdoor_only": true,
+        "alternatives": ["birchbark-carving"]
+      },
+      {
+        "id": "herb-walk",
+        "name": "坡地认药采药",
+        "kind": "herbal_culture",
+        "duration_minutes": 60,
+        "price_cents": 900,
+        "outdoor_only": true,
+        "alternatives": ["herb-culture"]
+      },
+      {
+        "id": "herb-culture",
+        "name": "道地药材文化讲解",
+        "kind": "herbal_culture",
+        "duration_minutes": 45,
+        "price_cents": 600
+      },
+      {
+        "id": "herb-tasting",
+        "name": "北药代茶饮品鉴",
+        "kind": "herbal_culture",
+        "duration_minutes": 40,
+        "price_cents": 800
+      },
+      {
+        "id": "folk-experience",
+        "name": "民居与岁时民俗体验",
+        "kind": "folk_custom",
+        "duration_minutes": 60,
+        "price_cents": 1000
+      }
+    ],
     "resources": [
       {
         "id": "storyteller-01",
+        "name": "摩苏昆传承人（示例甲）",
         "kind": "oral_tradition",
-        "capacity": 1
+        "location_id": "oral-stage",
+        "capacity": 1,
+        "capacity_unit": "team",
+        "sessions": [["09:00", "11:00"], ["14:00", "16:00"]],
+        "offers": [
+          {"content": "mosukun-frag", "authorized": true},
+          {"content": "ritual-fragment", "authorized": false, "note": "本年度未签署对外讲述授权"}
+        ]
+      },
+      {
+        "id": "storyteller-02",
+        "name": "摩苏昆传承人（示例乙）",
+        "kind": "oral_tradition",
+        "location_id": "story-corner",
+        "capacity": 1,
+        "capacity_unit": "team",
+        "sessions": [["09:30", "11:30"]],
+        "offers": [
+          {"content": "mosukun-frag", "authorized": true}
+        ]
+      },
+      {
+        "id": "craft-01",
+        "name": "桦树皮工艺坊",
+        "kind": "craft",
+        "location_id": "birchbark-hall",
+        "capacity": 30,
+        "capacity_unit": "person",
+        "sessions": [["09:30", "11:30"], ["13:30", "16:30"]],
+        "offers": [
+          {"content": "birchbark-carving", "authorized": true}
+        ]
+      },
+      {
+        "id": "craft-02",
+        "name": "桦皮船林间制作点",
+        "kind": "craft",
+        "location_id": "outdoor-camp",
+        "capacity": 1,
+        "capacity_unit": "team",
+        "sessions": [["09:00", "12:00"], ["13:00", "16:00"]],
+        "offers": [
+          {"content": "birchbark-boat", "authorized": true}
+        ]
+      },
+      {
+        "id": "herb-01",
+        "name": "道地药材文化展馆",
+        "kind": "herbal_culture",
+        "location_id": "herb-hall",
+        "capacity": 40,
+        "capacity_unit": "person",
+        "sessions": [["08:30", "12:00"], ["13:00", "17:00"]],
+        "offers": [
+          {"content": "herb-culture", "authorized": true},
+          {"content": "herb-tasting", "authorized": true}
+        ]
+      },
+      {
+        "id": "herb-02",
+        "name": "北药辨识坡地",
+        "kind": "herbal_culture",
+        "location_id": "herb-field",
+        "capacity": 1,
+        "capacity_unit": "team",
+        "sessions": [["09:00", "11:30"], ["13:30", "16:00"]],
+        "offers": [
+          {"content": "herb-walk", "authorized": true}
+        ]
+      },
+      {
+        "id": "folk-01",
+        "name": "民俗体验院落（示例住户）",
+        "kind": "folk_custom",
+        "location_id": "folk-yard",
+        "capacity": 25,
+        "capacity_unit": "person",
+        "sessions": [["09:00", "11:30"], ["13:30", "16:30"]],
+        "offers": [
+          {"content": "folk-experience", "authorized": true}
+        ]
       }
     ],
     "groups": [
+      {"id": "G-18", "size": 22, "mobility_support": true, "contact": "领队 G-18（示例）"},
+      {"id": "G-24", "size": 16, "mobility_support": false, "contact": "领队 G-24（示例）"}
+    ],
+    "itinerary_requests": [
       {
-        "id": "G-18",
-        "size": 22,
-        "mobility_support": true
+        "group": "G-18",
+        "items": [
+          {"content": "mosukun-frag", "resource": "storyteller-01", "preferred_start": "09:00"},
+          {"content": "birchbark-carving", "resource": "craft-01", "preferred_start": "10:15"},
+          {"content": "herb-walk", "resource": "herb-02", "preferred_start": "13:30"},
+          {"content": "folk-experience", "resource": "folk-01", "preferred_start": "15:30"},
+          {"content": "sacred-song", "resource": "storyteller-01", "preferred_start": "16:00"}
+        ]
+      },
+      {
+        "group": "G-24",
+        "items": [
+          {"content": "mosukun-frag", "resource": "storyteller-01", "preferred_start": "09:00"},
+          {"content": "ritual-fragment", "resource": "storyteller-01", "preferred_start": "11:00"},
+          {"content": "birchbark-boat", "resource": "craft-02", "preferred_start": "13:30"},
+          {"content": "herb-tasting", "resource": "herb-01", "preferred_start": "15:30"}
+        ],
+        "note": "申报首项与 G-18 同撞 storyteller-01 09:00；摩苏昆改由 storyteller-02 承接"
       }
+    ],
+    "conditions": {
+      "weather_forecast": [
+        {"period": ["08:00", "18:00"], "summary": "晨间申报：多云转阴，午后风力减弱", "outdoor_ok": true, "note": "12:40 现场突降阵雨，见 operations 中 EV-3001"}
+      ],
+      "trail_closures": [
+        {"edge": ["village-square", "outdoor-camp"], "from": "12:30", "to": "14:30", "reason": "午后道路施工"}
+      ]
+    },
+    "pricing_currency": "CNY",
+    "payees": [
+      {"id": "P-meng", "name": "摩苏昆传承人甲（示例）"},
+      {"id": "P-ge", "name": "摩苏昆传承人乙（示例）"},
+      {"id": "P-wu", "name": "桦树皮工艺师（示例）"},
+      {"id": "P-herb", "name": "药材讲解员（示例）"},
+      {"id": "H-birch", "name": "桦树皮工艺坊（场馆账户）"},
+      {"id": "H-herb", "name": "道地药材文化展馆（场馆账户）"},
+      {"id": "H-folk", "name": "民俗院落住户（示例）"},
+      {"id": "collective", "name": "新生鄂伦春族乡运营联合体（集体账户）"}
+    ],
+    "split_rules": {
+      "storyteller-01": [
+        {"payee": "P-meng", "share": 0.8},
+        {"payee": "collective", "share": 0.2}
+      ],
+      "storyteller-02": [
+        {"payee": "P-ge", "share": 0.8},
+        {"payee": "collective", "share": 0.2}
+      ],
+      "craft-01": [
+        {"payee": "P-wu", "share": 0.5},
+        {"payee": "H-birch", "share": 0.4},
+        {"payee": "collective", "share": 0.1}
+      ],
+      "craft-02": [
+        {"payee": "P-wu", "share": 0.8},
+        {"payee": "collective", "share": 0.2}
+      ],
+      "herb-01": [
+        {"payee": "H-herb", "share": 0.5},
+        {"payee": "P-herb", "share": 0.4},
+        {"payee": "collective", "share": 0.1}
+      ],
+      "folk-01": [
+        {"payee": "H-folk", "share": 0.7},
+        {"payee": "collective", "share": 0.3}
+      ]
+    },
+    "operations": [
+      {"id": "EV-1001", "at": "08:50", "type": "headcount", "group": "G-18", "actual": 22},
+      {"id": "EV-1002", "at": "08:50", "type": "headcount", "group": "G-24", "actual": 16},
+      {"id": "EV-2001", "at": "09:02", "type": "checkin", "group": "G-18", "resource": "storyteller-01", "content": "mosukun-frag", "scheduled_start": "09:00", "actual": 22},
+      {"id": "EV-2002", "at": "10:16", "type": "checkin", "group": "G-18", "resource": "craft-01", "content": "birchbark-carving", "scheduled_start": "10:15", "actual": 22},
+      {"id": "EV-2005", "at": "10:10", "type": "late_arrival", "group": "G-24", "resource": "storyteller-02", "content": "mosukun-frag", "scheduled_start": "09:30", "minutes": 40},
+      {"id": "EV-2006", "at": "10:12", "type": "checkin", "group": "G-24", "resource": "storyteller-02", "content": "mosukun-frag", "scheduled_start": "09:30", "actual": 16},
+      {"id": "EV-3001", "at": "12:40", "type": "stop", "resource": "craft-02", "from": "12:40", "reason": "阵雨延后，林间步道持续湿滑，户外制作点下午场停演"},
+      {"id": "EV-3002", "at": "12:45", "type": "reroute", "group": "G-24", "from_resource": "craft-02", "content": "birchbark-boat", "scheduled_start": "13:30", "to_resource": "craft-01", "to_content": "birchbark-carving", "new_start": "13:40", "reason": "户外停演，改至室内工艺坊同主题体验"},
+      {"id": "EV-2003", "at": "13:34", "type": "checkin", "group": "G-18", "resource": "herb-01", "content": "herb-culture", "scheduled_start": "13:30", "actual": 21, "note": "1 名游客身体不适留村休息"},
+      {"id": "EV-2007", "at": "13:46", "type": "checkin", "group": "G-24", "resource": "craft-01", "content": "birchbark-carving", "scheduled_start": "13:40", "actual": 16},
+      {"id": "EV-3003", "at": "15:25", "type": "cancel", "group": "G-24", "resource": "herb-01", "content": "herb-tasting", "scheduled_start": "15:30", "reason": "团队提前返程", "by": "group_lead"},
+      {"id": "EV-2004", "at": "16:20", "occurred_at": "15:50", "type": "checkin", "group": "G-18", "resource": "folk-01", "content": "folk-experience", "scheduled_start": "15:30", "actual": 20, "offline": {"device_id": "yard-tab-03", "recorded_at": "15:50", "synced_at": "16:20"}, "note": "院落无信号离线核销，2 名游客提前离团"},
+      {"id": "EV-2004", "at": "16:25", "occurred_at": "15:50", "type": "checkin", "group": "G-18", "resource": "folk-01", "content": "folk-experience", "scheduled_start": "15:30", "actual": 20, "offline": {"device_id": "yard-tab-03", "recorded_at": "15:50", "synced_at": "16:20", "retry": true},
+        "note": "网络恢复后终端重试，与 EV-2004 为同一笔离线核销"}
     ]
   }
 }
